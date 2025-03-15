@@ -30,8 +30,8 @@
                     <li class="{{ request()->is('dashboard/classrooms') ? 'active' : '' }}">
                         <a class="menu-item" href="{{ url('dashboard/classrooms') }}">Data Kelas</a>
                     </li>
-                    <li class="{{ request()->is('dashboard/jurusan') ? 'active' : '' }}">
-                        <a class="menu-item" href="{{ url('dashboard/jurusan') }}">Data Jurusan</a>
+                    <li class="{{ request()->is('dashboard/majors') ? 'active' : '' }}">
+                        <a class="menu-item" href="{{ url('dashboard/majors') }}">Data Jurusan</a>
                     </li>
                     <li class="{{ request()->is('dashboard/teachers') ? 'active' : '' }}">
                         <a class="menu-item" href="{{ url('dashboard/teachers') }}">Data Guru</a>
@@ -49,7 +49,81 @@
                         <a class="menu-item" href="{{ url('dashboard/announcements') }}">Data Pengumuman</a>
                     </li>
                 </ul>
+            </li> 
+            <li class=" nav-item {{ request()->is('dashboard/categories*') || request()->is('dashboard/vendors*') || 
+            request()->is('dashboard/inventories*')  ? 'active' : '' }}"><a href="#"><i 
+            class="ft-monitor"></i><span class="menu-title" data-i18n="">Master Barang</span></a>
+                <ul class="menu-content">
+                    <li class="{{ request()->is('dashboard/categories') ? 'active' : '' }}">
+                        <a class="menu-item" href="{{ url('dashboard/categories') }}">Data Kategori</a>
+                    </li>
+                    <li class="{{ request()->is('dashboard/vendors') ? 'active' : '' }}">
+                        <a class="menu-item" href="{{ url('dashboard/vendors') }}">Data Vendor</a>
+                    </li>
+                    <li class="{{ request()->is('dashboard/inventories') ? 'active' : '' }}">
+                        <a class="menu-item" href="{{ url('dashboard/inventories') }}">Data inventories</a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-item {{ request()->is('dashboard/violations*') || 
+            request()->is('dashboard/sanction-types*')|| 
+            request()->is('dashboard/violation-types*')  ? 'active' : '' }}">
+            <a href="#"><i class="ft-aperture"></i><span class="menu-title" data-i18n="">Data Pelanggaran</span></a>
+                <ul class="menu-content">
+                    <li class="{{ request()->is('dashboard/violations') ? 'active' : '' }}">
+                        <a class="menu-item" href="{{ url('dashboard/violations') }}">Data Pelanggaran</a>
+                    </li>
+                    <li class="{{ request()->is('dashboard/violation-types') ? 'active' : '' }}">
+                        <a class="menu-item" href="{{ url('dashboard/violation-types') }}">Jenis Pelanggaran</a>
+                    </li>
+                    <li class="{{ request()->is('dashboard/sanction-types') ? 'active' : '' }}">
+                        <a class="menu-item" href="{{ url('dashboard/sanction-types') }}">Jenis Sanksi</a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-item {{ request()->is('dashboard/achievements*') || 
+            request()->is('dashboard/achievement-types*')|| request()->is('dashboard/achievement-awards*')  ? 'active' : '' }}">
+            <a href="#"><i class="ft-bookmark"></i><span class="menu-title" data-i18n="">Data Prestasi</span></a>
+                <ul class="menu-content">
+                    <li class="{{ request()->is('dashboard/achievements') ? 'active' : '' }}">
+                        <a class="menu-item" href="{{ url('dashboard/achievements') }}">Data Prestasi</a>
+                    </li>
+                    <li class="{{ request()->is('dashboard/achievement-types') ? 'active' : '' }}">
+                        <a class="menu-item" href="{{ url('dashboard/achievement-types') }}">Jenis Prestasi</a>
+                    </li>
+                    <li class="{{ request()->is('dashboard/achievement-awards') ? 'active' : '' }}">
+                        <a class="menu-item" href="{{ url('dashboard/achievement-awards') }}">Jenis Penghargaan</a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-item {{ request()->is('dashboard/curriculums*') || request()->is('dashboard/silabuses*') ? 'active' : '' }}"><a href="#"><i class="ft-grid"></i><span class="menu-title" data-i18n="">Data Pendidikan</span></a>
+                <ul class="menu-content">
+                    <li class="{{ request()->is('dashboard/curriculums') ? 'active' : '' }}">
+                        <a class="menu-item" href="{{ url('dashboard/curriculums') }}">Data Kurikulum</a>
+                    </li>
+                    <li class="{{ request()->is('dashboard/silabuses') ? 'active' : '' }}">
+                        <a class="menu-item" href="{{ url('dashboard/silabuses') }}">Data Silabus</a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-item {{ request()->is('dashboard/exams*') || request()->is('dashboard/questions*') ? 'active' : '' }}"><a href="#"><i class="ft-command"></i><span class="menu-title" data-i18n="">Data Ujian</span></a>
+                <ul class="menu-content">
+                    <li class="{{ request()->is('dashboard/exams') ? 'active' : '' }}">
+                        <a class="menu-item" href="{{ url('dashboard/exams') }}">Data Ujian</a>
+                    </li>
+                    <li class="{{ request()->is('dashboard/questions') ? 'active' : '' }}">
+                        <a class="menu-item" href="{{ url('dashboard/questions') }}">Soal Ujian</a>
+                    </li>
+                    <li class="{{ request()->is('dashboard/tests') ? 'active' : '' }}">
+                        <a class="menu-item" href="{{ url('dashboard/tests') }}">Daftar Ujian</a>
+                    </li>
+                    <li class="{{ request()->is('dashboard/hasilujian') ? 'active' : '' }}">
+                        <a class="menu-item" href="{{ url('dashboard/hasilujian') }}">Hasil Ujian</a>
+                    </li>
+                </ul>
             </li>           
+            
+
             <li class="nav-item {{ request()->is('dashboard/edit_profile*') ? 'active' : '' }}">
                 <a class="menu-item" href="{{ url('dashboard/edit_profile') }}">
                     <i class="ft-user"></i>

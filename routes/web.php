@@ -15,6 +15,20 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/classrooms', function () {
         return view('dashboard.classrooms.index');
     })->name('classrooms.index');
+
+    Route::get('/teachers', function () {
+        return view('dashboard.teachers.index');
+    })->name('teachers.index');
+
+    Route::get('/majors', function () {
+        return view('dashboard.majors.index');
+    })->name('majors.index');
+
+    Route::get('/mapels', function () {
+        return view('dashboard.mapels.index');
+    })->name('mapels.index');
+
+
 });
 
 
