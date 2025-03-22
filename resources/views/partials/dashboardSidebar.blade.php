@@ -50,10 +50,12 @@
                     </li>
                 </ul>
             </li> 
+
             <li class=" nav-item {{ request()->is('dashboard/categories*') || request()->is('dashboard/vendors*') || 
             request()->is('dashboard/inventories*')  ? 'active' : '' }}"><a href="#"><i 
             class="ft-monitor"></i><span class="menu-title" data-i18n="">Master Barang</span></a>
                 <ul class="menu-content">
+                    
                     <li class="{{ request()->is('dashboard/categories') ? 'active' : '' }}">
                         <a class="menu-item" href="{{ url('dashboard/categories') }}">Data Kategori</a>
                     </li>
@@ -65,11 +67,11 @@
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item {{ request()->is('dashboard/violations*') || 
-            request()->is('dashboard/sanction-types*')|| 
+            <li class=" nav-item {{ request()->is('dashboard/violations*') ||  request()->is('dashboard/sanction-types*')|| 
             request()->is('dashboard/violation-types*')  ? 'active' : '' }}">
             <a href="#"><i class="ft-aperture"></i><span class="menu-title" data-i18n="">Data Pelanggaran</span></a>
                 <ul class="menu-content">
+
                     <li class="{{ request()->is('dashboard/violations') ? 'active' : '' }}">
                         <a class="menu-item" href="{{ url('dashboard/violations') }}">Data Pelanggaran</a>
                     </li>

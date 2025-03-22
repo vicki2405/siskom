@@ -28,6 +28,20 @@ Route::prefix('dashboard')->group(function () {
         return view('dashboard.mapels.index');
     })->name('mapels.index');
 
+    Route::get('/vendors', function () {
+        return view('dashboard.vendors.index');
+    })->name('vendors.index');
+
+    Route::get('/categories', function () {
+        return view('dashboard.categories.index');
+    })->name('categories.index');
+
+    Route::get('/inventories', function () {
+        return view('dashboard.inventories.index');
+    })->name('inventories.index');
+
+
+
 
 });
 
